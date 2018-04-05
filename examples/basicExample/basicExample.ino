@@ -16,10 +16,10 @@ void setup() {
 }
 
 void loop() {
-  //double temp = therm1.analog2temp(); // read temperature
+  double temp = therm1.analog2temp(); // read temperature
   //Print temperature in port serial
   Serial.print("Temperatura: "); 
-  //Serial.println((String)temp);
+  Serial.println((String)temp);
   Serial.print("----------------------");
   delay(2000); //wait 2000 mS for next measure
 }
