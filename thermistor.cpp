@@ -4,7 +4,7 @@
 #include "configuration.h"
 #include "conditionals.h"
 #include "thermistortables.h"
-#include "temperatura.h"
+#include "thermistor.h"
 #define HOTENDS  1
 
 
@@ -25,19 +25,13 @@ static uint8_t heater_ttbllen_map[] = ARRAY_BY_HOTENDS(HEATER_0_TEMPTABLE_LEN, H
 
 #define PGM_RD_W(x)   (short)pgm_read_word(&x)
 
- #ifdef DIDR2
-    #define ANALOG_SELECT(pin) do{ if (pin < 8) SBI(DIDR0, pin); else SBI(DIDR2, pin - 8); }while(0)
-  #else
-    #define ANALOG_SELECT(pin) do{ SBI(DIDR0, pin); }while(0)
-  #endif 
-
-temperatura::temperatura(int pin, int sensorNumber)
+thermistor::thermistor(int pin, int sensorNumber)
 {
   pinMode(pin, INPUT);
   _pin = pin;
   _sensorNumber = sensorNumber;
 }
-float temperatura::analog2temp() {
+float thermistor::analog2temp() {
   uint8_t e = _sensorNumber;
   int raw  =  0;
   for(int j=1;j<=OVERSAMPLENR;j++){
