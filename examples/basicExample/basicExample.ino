@@ -5,7 +5,7 @@
 // Depends on the following Arduino libraries:
 // - Arduino thermistor library: https://github.com/miguel5612/Arduino-ThermistorLibrary
 
-#include "thermistor.h"
+#include <thermistor.h>
 
 thermistor therm1(A0,0);  // Analog Pin which is connected to the 3950 temperature sensor, and 0 represents TEMP_SENSOR_0 (see configuration.h for more information).
 
@@ -16,10 +16,10 @@ void setup() {
 }
 
 void loop() {
-  double temp = therm1.analog2temp(); // read temperature
+  //double temp = therm1.analog2temp(); // read temperature
   //Print temperature in port serial
   Serial.print("Temperatura: "); 
-  Serial.println((String)temp);
+  //Serial.println((String)temp);
   Serial.print("----------------------");
   delay(2000); //wait 2000 mS for next measure
 }

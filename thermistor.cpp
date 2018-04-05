@@ -1,10 +1,10 @@
 
 #include <Arduino.h>
 #include <stdint.h>
-#include "configuration.h"
-#include "conditionals.h"
-#include "thermistortables.h"
-#include "thermistor.h"
+#include <src/configuration.h>
+#include <src/conditionals.h>
+#include <src/thermistortables.h>
+#include <thermistor.h>
 #define HOTENDS  1
 
 
