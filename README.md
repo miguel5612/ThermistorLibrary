@@ -7,7 +7,7 @@
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
 - [Issue/Bug report template](#issuebug-report-template)
-- [ESP32Dev Board PINMAP](#esp32dev-board-pinmap)
+- [Supported devices](#Example-ith-ramps-schematic)
 
 ## Development Status
 Most marlin is applied to calculate the temperature accurately.
