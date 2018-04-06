@@ -8,9 +8,9 @@
 - [Installation Instructions](#installation-instructions)
 - [Issue/Bug report template](#issuebug-report-template)
 - [Supported devices](#supported-thermistors)
-- [Temperature sensors available](#Temperature-sensors-available)
-- [Acknowledgements](#Acknowledgements)
-- [More information](#More-information)
+- [Temperature sensors available](#temperature-sensors-available)
+- [Acknowledgements](#acknowledgements)
+- [More information](#more-information)
 ## Development Status
 Most marlin is applied to calculate the temperature accurately.
 - Supports any number of thermistors, the only thing that limits you is the number of analog inputs your arduino card has
