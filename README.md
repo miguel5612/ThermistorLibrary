@@ -88,5 +88,11 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
  *         Use these for Testing or Development purposes. NEVER for production machine.
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
- *
- 
+
+## Acknowledgements:
+
+*  Marlin Firmware (http://marlinfw.org/)
+
+## More information:
+
+*  Marlin usage (http://marlinfw.org/docs/configuration/configuration.html) 
