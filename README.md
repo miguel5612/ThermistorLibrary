@@ -73,14 +73,16 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
  *    70 : the 100K thermistor found in the bq Hephestos 2
  *    75 : 100k Generic Silicon Heat Pad with NTC 100K MGB18-104F39050L32 thermistor
  *    80 : 3950 thermistor 100K - 4k7 Pull up and 10Uf Capacitor
- *
- *       1k ohm pullup tables - This is atypical, and requires changing out the 4.7k pullup for 1k.
- *                              (but gives greater accuracy and more stable PID)
+ 
+        1k ohm pullup tables - This is atypical, and requires changing out the 4.7k pullup for 1k.
+                             (but gives greater accuracy and more stable PID)
+
  *    51 : 100k thermistor - EPCOS (1k pullup)
  *    52 : 200k thermistor - ATC Semitec 204GT-2 (1k pullup)
  *    55 : 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (1k pullup)
- *
- *         Use these for Testing or Development purposes. NEVER for production machine.
+ 
+         Use these for Testing or Development purposes. NEVER for production machine.
+
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
 
