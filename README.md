@@ -1,6 +1,5 @@
 # Arduino thermistor library
 
-[![Build Status](http://blakehall.org/tugboat-session-slides/images/build_passing.png)](https://travis-ci.org/espressif/arduino-esp32)
 
 ### Need help or have a question? Send me an email: miguelangelcu@ufps.edu.co
 
