@@ -7,7 +7,7 @@
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
 - [Issue/Bug report template](#issuebug-report-template)
-- [Supported devices](#Supported-thermistors)
+- [Supported devices](#supported-thermistors)
 - [Temperature sensors available](#Temperature-sensors-available)
 - [Acknowledgements](#Acknowledgements)
 - [More information](#More-information)
