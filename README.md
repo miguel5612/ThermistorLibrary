@@ -7,7 +7,7 @@
 - [Development Status](#development-status)
 - [Installation Instructions](#installation-instructions)
 - [Issue/Bug report template](#issuebug-report-template)
-- [Supported devices](#Example-ith-ramps-schematic)
+- [Supported devices](#Example-with-ramps-schematic)
 
 ## Development Status
 Most marlin is applied to calculate the temperature accurately.
