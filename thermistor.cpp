@@ -5,10 +5,8 @@
 #include <src/conditionals.h>
 #include <src/thermistortables.h>
 #include <thermistor.h>
+
 #define HOTENDS  1
-
-
-
 #define ARRAY_6(v1, v2, v3, v4, v5, v6, ...) { v1, v2, v3, v4, v5, v6 }
 #define ARRAY_5(v1, v2, v3, v4, v5, ...)     { v1, v2, v3, v4, v5 }
 #define ARRAY_4(v1, v2, v3, v4, ...)         { v1, v2, v3, v4 }
@@ -17,13 +15,12 @@
 #define ARRAY_1(v1, ...)                     { v1 }
 #define _ARRAY_N(N, ...) ARRAY_ ##N(__VA_ARGS__)
 #define ARRAY_N(N, ...) _ARRAY_N(N, __VA_ARGS__)
-
 #define ARRAY_BY_HOTENDS(...) ARRAY_N(HOTENDS, __VA_ARGS__)
 #define ARRAY_BY_HOTENDS1(v1) ARRAY_BY_HOTENDS(v1, v1, v1, v1, v1, v1)
+#define PGM_RD_W(x)   (short)pgm_read_word(&x)
+
 static void* heater_ttbl_map[] = ARRAY_BY_HOTENDS((void*)HEATER_0_TEMPTABLE, (void*)HEATER_1_TEMPTABLE, (void*)HEATER_2_TEMPTABLE, (void*)HEATER_3_TEMPTABLE, (void*)HEATER_4_TEMPTABLE);
 static uint8_t heater_ttbllen_map[] = ARRAY_BY_HOTENDS(HEATER_0_TEMPTABLE_LEN, HEATER_1_TEMPTABLE_LEN, HEATER_2_TEMPTABLE_LEN, HEATER_3_TEMPTABLE_LEN, HEATER_4_TEMPTABLE_LEN);
-
-#define PGM_RD_W(x)   (short)pgm_read_word(&x)
 
 thermistor::thermistor(int pin, int sensorNumber)
 {
@@ -37,14 +34,6 @@ float thermistor::analog2temp() {
   for(int j=1;j<=OVERSAMPLENR;j++){
     raw += analogRead(_pin);
   }
-  Serial.print("Raw");
-  Serial.print(e);
-  Serial.print("   ");
-  Serial.print("Pin: ");
-  Serial.print(_pin);
-  Serial.print("   ");
-  Serial.print("Lectura: ");
-  Serial.println(raw);
   if (heater_ttbl_map[e] != NULL) {
     float celsius = 0;
     uint8_t i;
@@ -60,7 +49,7 @@ float thermistor::analog2temp() {
     }
     
     // Overflow: Set to last value in the table
-    if (i == heater_ttbllen_map[e]){ celsius = PGM_RD_W((*tt)[i - 1][1]);Serial.println("overflow");}
+    if (i == heater_ttbllen_map[e]){ celsius = PGM_RD_W((*tt)[i - 1][1]);}
 
     return celsius;
   }
