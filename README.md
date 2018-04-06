@@ -17,7 +17,7 @@ Most marlin is applied to calculate the temperature accurately.
 ## Installation Instructions
 
 - Using Arduino IDE
-  + Clic in green download button.
+  + Clic in green Clone or download button.
   + Select download as zip.	
   + Follow this instruccions: [Instructions for Windows or mac](https://www.arduino.cc/en/Guide/Libraries)
 
@@ -93,8 +93,8 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
 
 ## Acknowledgements:
 
-*  Marlin Firmware (http://marlinfw.org/)
+*  [Marlin Firmware](http://marlinfw.org/)
 
 ## More information:
 
-*  Marlin usage (http://marlinfw.org/docs/configuration/configuration.html) 
+*  [Marlin usage](http://marlinfw.org/docs/configuration/configuration.html) 
