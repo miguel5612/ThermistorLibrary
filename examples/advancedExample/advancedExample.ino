@@ -20,15 +20,15 @@ void setup() {
 
 void loop() {
   // All thermistor temperature is in degrade.
-  double temp = therm1.analog2temp(); // read temperature
-  double temp = therm2.analog2temp(); // read temperature
+  double temp1 = therm1.analog2temp(); // read temperature
+  double temp2 = therm2.analog2temp(); // read temperature
   //Print temperature in port serial
   Serial.print("Temperatura del termistor 1: "); 
-  Serial.println((String)temp);
+  Serial.println((String)temp1);
   Serial.print("----------------------");
   
   Serial.print("Temperatura del termistor 2: "); 
-  Serial.println((String)temp);
+  Serial.println((String)temp2);
   Serial.print("----------------------");
   delay(2000); //wait 2000 mS for next measure
 }
