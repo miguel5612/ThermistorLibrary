@@ -25,19 +25,15 @@ Most marlin is applied to calculate the temperature accurately.
 
 Before reporting an issue, make sure you've searched for similar one that was already created. 
 
-## Example with ramps schematic:
+## Example with ramps schematic
 
 ![Pin Functions](http://chrisbarrbuilds.com/wp-content/uploads/2015/07/thermistorDiagram.png)
 
-
-
-
-## Supported thermistors:
+## Supported thermistors
 
 All definitions in src/Configuration.h file.
 
-Example configuration:
-
+Example configuration
 
 *  #define TEMP_SENSOR_0 80 // This is thermistor 0
 *  #define TEMP_SENSOR_1 0 // This is thermistor 1
@@ -52,7 +48,7 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
 
 
 
-## Temperature sensors available:
+## Temperature sensors available
 
  *     0 : not used
  *     1 : 100k thermistor - best choice for EPCOS 100k (4.7k pullup)
@@ -91,10 +87,10 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
 
-## Acknowledgements:
+## Acknowledgements
 
 *  [Marlin Firmware](http://marlinfw.org/)
 
-## More information:
+## More information
 
 *  [Marlin usage](http://marlinfw.org/docs/configuration/configuration.html) 
