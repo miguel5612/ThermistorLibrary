@@ -34,15 +34,15 @@ Before reporting an issue, make sure you've searched for similar one that was al
 
 All definitions in src/Configuration.h file.
 
-Example:
+Example configuration:
 
 
-#define TEMP_SENSOR_0 80 // This is thermistor 0
-#define TEMP_SENSOR_1 0 // This is thermistor 1
-#define TEMP_SENSOR_2 0 // This is thermistor 2
-#define TEMP_SENSOR_3 0 // This is thermistor 3
-#define TEMP_SENSOR_4 0 // This is thermistor 4
-#define TEMP_SENSOR_BED 80 // This is not used thermistor
+*  #define TEMP_SENSOR_0 80 // This is thermistor 0
+*  #define TEMP_SENSOR_1 0 // This is thermistor 1
+*  #define TEMP_SENSOR_2 0 // This is thermistor 2
+*  #define TEMP_SENSOR_3 0 // This is thermistor 3
+*  #define TEMP_SENSOR_4 0 // This is thermistor 4
+*  #define TEMP_SENSOR_BED 80 // This is not used thermistor
 
 At this example we asigned to therm0 80 ( 3950 thermistor 100K - 4k7 Pull up and 10Uf Capacitor ) (RAMPS STYLE)
 In basic example selected thermistor is PIN A0 and therm0 (thermistor therm1(A0,0))
