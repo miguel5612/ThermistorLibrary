@@ -17,7 +17,9 @@ Most marlin is applied to calculate the temperature accurately.
 ## Installation Instructions
 
 - Using Arduino IDE
-  + [Instructions for Windows or mac](https://www.arduino.cc/en/Guide/Libraries)
+  + Clic in green download button.
+  + Select download as zip.	
+  + Follow this instruccions: [Instructions for Windows or mac](https://www.arduino.cc/en/Guide/Libraries)
 
 #### Issue/Bug report template
 
