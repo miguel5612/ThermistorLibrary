@@ -44,8 +44,8 @@ Example configuration
 *  #define TEMP_SENSOR_4 0 // This is thermistor 4
 *  #define TEMP_SENSOR_BED 80 // This is not used thermistor
 
-At this example we asigned to therm0 80 ( 3950 thermistor 100K - 4k7 Pull up and 10Uf Capacitor ) (RAMPS STYLE)
-In basic example selected thermistor is PIN A0 and therm0 (thermistor therm1(A0,0))
+At this example we asigned to therm0 80 ( 3950 thermistor 100K - 4k7 Pull up and 10Uf Capacitor ) (RAMPS STYLE).
+In basic example selected thermistor is PIN A0 and therm0 (thermistor therm1(A0,0)).
 therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capacitor to GND.
 
 
