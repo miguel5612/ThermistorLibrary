@@ -110,6 +110,12 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
 
 *  [Marlin usage](http://marlinfw.org/docs/configuration/configuration.html) 
 
+## Authors
+
+* **Miguel A. Califa U.** - [*GitHub*](https://github.com/miguel5612) - [CV](https://scienti.colciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000050477)
+* **Carlos M. Pallares C.** - [*GitHub*]() - [CV]() 
+
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
