@@ -1,7 +1,23 @@
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![DOI](https://zenodo.org/badge/170540207.svg)](https://zenodo.org/badge/latestdoi/170540207)
+![Build Status][build-url]
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
 # Arduino thermistor library
 
-
-### Need help or have a question? Send me an email: miguelangelcu@ufps.edu.co
+### Need help or have a question? Send me an [email](mailto:miguelangelcu@ufps.edu.co), [email2](mailto:miguelangel5612@gmail.com)
 
 ## Contents
 - [Development Status](#development-status)
@@ -66,7 +82,7 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
  *     10 : 100k RS thermistor 198-961 (4.7k pullup)
  *     11 : 100k beta 3950 1% thermistor (4.7k pullup)
  *     12 : 100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup) (calibrated for Makibox hot bed)
- *     13 : 100k Hisens 3950  1% up to 300°C for hotend "Simple ONE " & "Hotend "All In ONE"
+ *     13 : 100k Hisens 3950  1% up to 300Â°C for hotend "Simple ONE " & "Hotend "All In ONE"
  *     20 : the PT100 circuit found in the Ultimainboard V2.x
  *     60 : 100k Maker's Tool Works Kapton Bed Thermistor beta=3950
  *     66 : 4.7M High Temperature thermistor from Dyze Design
@@ -83,8 +99,8 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
  
          Use these for Testing or Development purposes. NEVER for production machine.
 
-*     998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
-*     999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
+*     998 : Dummy Table that ALWAYS reads 25Â°C or the temperature defined below.
+*     999 : Dummy Table that ALWAYS reads 100Â°C or the temperature defined below.
 
 ## Acknowledgements
 
@@ -93,3 +109,22 @@ therm 1 is an 3950 thermistor connected in A0 pin with 4k7 pullup and 10Uf capac
 ## More information
 
 *  [Marlin usage](http://marlinfw.org/docs/configuration/configuration.html) 
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/miguel5612/ThermistorLibrary.svg?style=flat-square
+[contributors-url]: https://github.com/miguel5612/ThermistorLibrary/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/miguel5612/ThermistorLibrary.svg?style=flat-square
+[forks-url]: https://github.com/miguel5612/ThermistorLibrary/network/members
+[stars-shield]: https://img.shields.io/github/stars/miguel5612/ThermistorLibrary.svg?style=flat-square
+[stars-url]: https://github.com/miguel5612/ThermistorLibrary/stargazers
+[issues-shield]: https://img.shields.io/github/issues/miguel5612/ThermistorLibrary.svg?style=flat-square
+[issues-url]: https://github.com/miguel5612/ThermistorLibrary/issues
+[license-shield]: https://img.shields.io/github/license/miguel5612/ThermistorLibrary.svg?style=flat-square
+[license-url]: https://github.com/miguel5612/ThermistorLibrary/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
+[build-url]: https://travis-ci.org/dwyl/esta.svg?branch=master
+[linkedin-url]: https://www.linkedin.com/in/miguel5612
+[product-screenshot]: images/screenshot.png
