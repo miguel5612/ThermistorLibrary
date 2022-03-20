@@ -31,6 +31,8 @@ thermistor::thermistor(int pin, int sensorNumber)
 float thermistor::analog2temp() {
   uint8_t e = _sensorNumber;
   int raw  =  0;
+  float celsius = 0;
+
   for(int j=1;j<=OVERSAMPLENR;j++){
     raw += analogRead(_pin);
   }
@@ -38,21 +40,27 @@ float thermistor::analog2temp() {
     float celsius = 0;
     uint8_t i;
     short(*tt)[][2] = (short(*)[][2])(heater_ttbl_map[e]);
-    for (i = 1; i < heater_ttbl_map[e]; i++) {
+    for (i = 1; i < heater_ttbllen_map[e]; i++) {
       if (PGM_RD_W((*tt)[i][0]) > raw) {
         celsius = PGM_RD_W((*tt)[i - 1][1]) +
                   (raw - PGM_RD_W((*tt)[i - 1][0])) *
                   (float)(PGM_RD_W((*tt)[i][1]) - PGM_RD_W((*tt)[i - 1][1])) /
                   (float)(PGM_RD_W((*tt)[i][0]) - PGM_RD_W((*tt)[i - 1][0]));
-        break;
+        return celsius;
       }
     }
-    
-    // Overflow: Set to last value in the table
-    if (i == heater_ttbllen_map[e]){ celsius = PGM_RD_W((*tt)[i - 1][1]);}
 
-    return celsius;
+    // Overflow: Set to last value in the table
+    if (i == heater_ttbllen_map[e])
+    { 
+      celsius = PGM_RD_W((*tt)[i - 1][1]);
+    }
   }
+  else {
+    celsius = NAN;
+  }
+
+  return celsius;
 }
 
 float thermistor::analog2tempEADC(int adcValue) {

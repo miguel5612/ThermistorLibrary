@@ -112,6 +112,9 @@
 #if ANY_THERMISTOR_IS(147) // Pt100 with 4k7 pullup
   #include "thermistortable_147.h"
 #endif
+#if ANY_THERMISTOR_IS(148) // E3D Pt100 with 4k7 pullup
+  #include "thermistortable_148.h"
+#endif
 #if ANY_THERMISTOR_IS(1010) // Pt1000 with 1k0 pullup
   #include "thermistortable_1010.h"
 #endif
