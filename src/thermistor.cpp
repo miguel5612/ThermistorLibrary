@@ -40,7 +40,8 @@ float thermistor::analog2temp() {
     float celsius = 0;
     uint8_t i;
     short(*tt)[][2] = (short(*)[][2])(heater_ttbl_map[e]);
-    for (i = 1; i < heater_ttbllen_map[e]; i++) {
+    int value = (int)heater_ttbllen_map[e];
+    for (i = 1; i < value; i++) {
       if (PGM_RD_W((*tt)[i][0]) > raw) {
         celsius = PGM_RD_W((*tt)[i - 1][1]) +
                   (raw - PGM_RD_W((*tt)[i - 1][0])) *
@@ -70,7 +71,8 @@ float thermistor::analog2tempEADC(int adcValue) {
     float celsius = 0;
     uint8_t i;
     short(*tt)[][2] = (short(*)[][2])(heater_ttbl_map[e]);
-    for (i = 1; i < heater_ttbl_map[e]; i++) {
+    int value = (int)heater_ttbl_map[e];
+    for (i = 1; i < value; i++) {
       if (PGM_RD_W((*tt)[i][0]) > raw) {
         celsius = PGM_RD_W((*tt)[i - 1][1]) +
                   (raw - PGM_RD_W((*tt)[i - 1][0])) *
