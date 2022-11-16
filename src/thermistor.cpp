@@ -67,8 +67,8 @@ float thermistor::analog2temp() {
 float thermistor::analog2tempEADC(int adcValue) {
   uint8_t e = _sensorNumber;
   int raw  =  adcValue;
+  float celsius = 0;
   if (heater_ttbl_map[e] != NULL) {
-    float celsius = 0;
     uint8_t i;
     short(*tt)[][2] = (short(*)[][2])(heater_ttbl_map[e]);
     int value = (int)heater_ttbl_map[e];
@@ -84,7 +84,9 @@ float thermistor::analog2tempEADC(int adcValue) {
     
     // Overflow: Set to last value in the table
     if (i == heater_ttbllen_map[e]){ celsius = PGM_RD_W((*tt)[i - 1][1]);}
-
-    return celsius;
+  } else {
+    celsius = NAN;
   }
+    
+  return celsius;
 }
